@@ -18,7 +18,11 @@ print(data.columns)
 print("num systems", data["system_number"].nunique())
 # %%
 
-data.hist("total_mass", bins=np.linspace(0,1,100))
+plt.scatter(
+np.log10(data["a"]),
+np.log10(data["total_mass"]),
+1
+)
 
 # %%
-
+# 
